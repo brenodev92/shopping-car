@@ -1,5 +1,5 @@
-import { cars } from "../../data/cars.data";
-import * as Actions from "../actions";
+import { cars } from "../../../data/cars.data";
+import * as Actions from "../../actions/appActions";
 
 const initialState = cars;
 

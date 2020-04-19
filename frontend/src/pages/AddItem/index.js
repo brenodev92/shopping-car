@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import * as Actions from "../../store/actions";
+import * as Actions from "../../store/actions/appActions";
 
 const AddItem = () => {
   const [form, setForm] = useState({ name: "", price: "", url: "" });
@@ -16,8 +16,11 @@ const AddItem = () => {
   function onSubmit(e) {
     e.preventDefault();
     dispatch(Actions.addCar(form));
-
     setForm({ name: "", price: "", url: "" });
+    dispatch(Actions.showAlert());
+    setTimeout(() => {
+      dispatch(Actions.hideAlert());
+    }, 1500);
   }
 
   return (

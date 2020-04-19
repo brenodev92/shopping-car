@@ -1,8 +1,10 @@
 import { combineReducers } from "redux";
-import carReducer from "./car.reducer";
+import carReducer from "./appReducers/car.reducer";
+import uxReducer from "./appReducers/ux.reducer";
 
-const rootReducer = combineReducers({
+const reducer = combineReducers({
   cars: carReducer,
+  ux: uxReducer,
 });
 
-export default rootReducer;
+export default reducer;
