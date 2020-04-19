@@ -1,7 +1,6 @@
 import React from 'react';
 import './style.css';
 
-
 export default function Car({ car }) {
 	return (
 		<div className="col-sm-3 mt-3 mb-3">
