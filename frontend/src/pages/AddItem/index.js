@@ -9,6 +9,10 @@ const AddItem = () => {
 				<label>Nome</label>
 				<input type="text" name="name" className="form-control" placeholder="Nome..." />
 			</div>
+      <div className="form-group">
+				<label>Preço</label>
+				<input type="text" name="price" className="form-control" placeholder="Preço..." />
+			</div>
 			<div className="form-group">
 				<label>URL:</label>
 				<input type="text" name="url" className="form-control" placeholder="URL:https://cars" />
