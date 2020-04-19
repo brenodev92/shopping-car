@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { Car } from "../../components";
 
 const ListItem = () => {
-  const cars = useSelector((state) => state);
+  const cars = useSelector((state) => state.cars);
 
   return (
     <div className="container-fluid">
