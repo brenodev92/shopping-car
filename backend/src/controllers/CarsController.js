@@ -16,7 +16,6 @@ class CarsController {
 
     const car = await this.dao.create(req.body)
     return res.status(201).json(car)
-
   }
 
 }
