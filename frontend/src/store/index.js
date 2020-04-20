@@ -1,4 +1,10 @@
-import { createStore } from "redux";
-import rootReducer from "./reducers";
+import { configureStore } from "@reduxjs/toolkit";
+import carReducer from "./reducers/appReducers/car.reducer";
+import uxReducer from "./reducers/appReducers/ux.reducer";
 
-export default createStore(rootReducer);
+export default configureStore({
+  reducer: {
+    cars: carReducer,
+    ux: uxReducer,
+  },
+});

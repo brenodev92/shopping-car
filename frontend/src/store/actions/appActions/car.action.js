@@ -1,8 +1,3 @@
-export const ADD_CAR = "ADD_CAR [CAR] NOVO CARRO";
+import { createAction } from "@reduxjs/toolkit";
 
-export function addCar(car) {
-  return {
-    type: ADD_CAR,
-    car,
-  };
-}
+export const addCar = createAction("ADD_CAR");
