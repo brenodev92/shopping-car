@@ -1,9 +1,9 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { cars } from "../../../data/cars.data";
 import * as Actions from "../../actions/appActions";
 
-const initialState = cars;
+const initialState = [];
 
 export default createReducer(initialState, {
   [Actions.addCar.type]: (state, action) => [...state, action.payload],
+  [Actions.addCars.type]: (state, action) => [...action.payload],
 });

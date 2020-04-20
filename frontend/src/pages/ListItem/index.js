@@ -1,9 +1,15 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Car } from "../../components";
+import * as Actions from "../../store/ducks/actions/appActions";
 
 const ListItem = () => {
+  const dispatch = useDispatch();
   const cars = useSelector((state) => state.cars);
+
+  useEffect(() => {
+    dispatch(Actions.getAllCars());
+  }, [dispatch]);
 
   return (
     <div className="container-fluid">
