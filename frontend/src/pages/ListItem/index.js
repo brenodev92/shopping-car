@@ -11,11 +11,15 @@ const ListItem = () => {
     dispatch(Actions.getAllCars());
   }, [dispatch]);
 
+  function addItemCart(car) {
+    dispatch(Actions.addItem(car));
+  }
+
   return (
     <div className="container-fluid">
       <div className="row">
         {cars.map((car, index) => (
-          <Car key={index} car={car} />
+          <Car key={index} car={car} addItemCart={addItemCart} />
         ))}
       </div>
     </div>
