@@ -35,7 +35,7 @@ const Login = () => {
         width: 350,
       }}
     >
-      <h2 className="mb-3">Shoppin-Car Login</h2>
+      <h2 className="mb-3">Shopping Car Login</h2>
       <div className="form-group">
         <input
           type="text"
