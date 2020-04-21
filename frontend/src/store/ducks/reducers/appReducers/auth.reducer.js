@@ -2,7 +2,7 @@ import { createReducer } from "@reduxjs/toolkit";
 import * as Actions from "../../actions/appActions";
 
 const initialState = {
-  isAuthenticated: false,
+  isAuthenticated: localStorage.getItem("token"),
 };
 
 export default createReducer(initialState, {
