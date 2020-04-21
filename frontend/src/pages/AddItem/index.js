@@ -19,11 +19,7 @@ const AddItem = () => {
 
     setForm({ name: "", price: "", url: "" });
 
-    dispatch(Actions.showAlert());
-
-    setTimeout(() => {
-      dispatch(Actions.hideAlert());
-    }, 1500);
+    dispatch(Actions.addMessages(`${form.name} Cadastrado com sucesso!`));
   }
 
   return (

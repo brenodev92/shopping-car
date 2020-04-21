@@ -13,6 +13,7 @@ const ListItem = () => {
 
   function addItemCart(car) {
     dispatch(Actions.addItem(car));
+    dispatch(Actions.addMessages(`Item ${car.name} adicionado!`));
   }
 
   return (

@@ -1,13 +1,6 @@
-export const SHOW_ALERT = "SHOW_ALERT [ALERT] ABRIR MENSAGEM";
-export const HIDE_ALERT = "HIDE_ALERT [ALERT] FECHAR MENSAGEM";
+import { createAction } from "@reduxjs/toolkit";
 
-export function showAlert() {
-  return {
-    type: SHOW_ALERT,
-  };
-}
-export function hideAlert() {
-  return {
-    type: HIDE_ALERT,
-  };
-}
+export const showAlert = createAction("SHOW_ALERT");
+export const hideAlert = createAction("HIDE_ALERT");
+export const addMessages = createAction("ADD_MESSAGES");
+export const removeMessages = createAction("REMOVE_MESSAGES");

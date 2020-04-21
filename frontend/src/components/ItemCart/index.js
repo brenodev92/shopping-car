@@ -16,7 +16,7 @@ const ItemCart = ({ item, removeItemCart }) => {
             </h5>
             <button
               className="btn btn-primary"
-              onClick={() => removeItemCart(item._id)}
+              onClick={() => removeItemCart(item)}
             >
               <i className="fa fa-trash fa-2x" />
             </button>

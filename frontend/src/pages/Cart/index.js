@@ -7,8 +7,10 @@ export default function Cart() {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
-  function removeItemCart(id) {
-    dispatch(Actions.removeItem(id));
+  function removeItemCart(car) {
+    dispatch(Actions.removeItem(car._id));
+
+    dispatch(Actions.addMessages(`Item ${car.name} removido!`));
   }
 
   return (
